@@ -4,11 +4,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
 	return (
 		<div>
+			<Router>
 			<Navbar />
 			<div className="container">
 				<Routes>
@@ -18,6 +19,7 @@ function App() {
 					<Route path="/contact" element={<Contact />} />
 				</Routes>
 			</div>
+			</Router>
 		</div>
 	);
 }
