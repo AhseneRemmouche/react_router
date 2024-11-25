@@ -11,6 +11,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RouteLayout from "./layout/RouteLayout";
+import ContactInfo from "./components/ContactInfo";
+import ContactForm from "./components/ContactForm";
+import ContactLayout from "./layout/ContactLayout";
 
 function App() {
   const router = createBrowserRouter(
@@ -19,7 +22,10 @@ function App() {
         <Route index element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<ContactLayout />}>
+          <Route path="info" element={<ContactInfo />} />
+          <Route path="form" element={<ContactForm />} />
+        </Route>
       </Route>
     )
   );
