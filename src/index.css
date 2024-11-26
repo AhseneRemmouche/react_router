@@ -28,9 +28,8 @@ a {
 	display: inline-block;
 	padding: 5px 10px;
 	margin: 0 10px;
-	
 }
-a.active{
+a.active {
 	color: crimson;
 }
 
@@ -57,14 +56,19 @@ a.active{
 	font-size: 70px;
 	font-weight: 500;
 }
-.contact_buttons{
+
+.container h2 {
+	font-size: 30px;
+	font-weight: 500;
+}
+.contact_buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 20px;
-
+	gap: 20px;
 }
-.contact_buttons button{
+.contact_buttons button {
 	padding: 5px 20px;
 	margin: 5px 20px;
 }
