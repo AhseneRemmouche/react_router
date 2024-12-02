@@ -87,3 +87,32 @@ a.active {
 	background: #efefef;
 	color: #000;
 }
+
+.todos {
+	display: flex;
+	width: 100%;
+	padding: 40px 0;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.todos a {
+	flex: 1;
+	text-decoration: none;
+	padding: 10px;
+	background: #efefef;
+	color: #000;
+}
+
+.todoDetails {
+	max-width: 100%;
+}
+
+.todoDetails h1 {
+	font-size: 2em;
+	padding-bottom: 15px;
+}
+
+.todoDetails p {
+	padding: 10px 0;
+}

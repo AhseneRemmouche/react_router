@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Jobs = () => {
 	const jobsData = useLoaderData();
-	console.log(jobsData);
+
 	return (
 		<div className="jobs">
 			{jobsData.map((job) => {
@@ -23,5 +23,6 @@ export default Jobs;
 
 export const jobsLoader = async () => {
 	const res = await fetch("http://localhost:7000/jobs");
+
 	return res.json();
 };

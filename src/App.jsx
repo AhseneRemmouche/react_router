@@ -1,4 +1,3 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,6 +16,9 @@ import ContactLayout from "./layout/ContactLayout";
 import NotFound from "./components/NotFound";
 import JobsLayout from "./layout/JobsLayout";
 import Jobs, { jobsLoader } from "./pages/Jobs";
+import TodosLayout from "./layout/TodosLayout";
+import Todos, { TodosLoader } from "./pages/Todos";
+import TodoDetails, { TodoDetailsLoader } from "./components/TodoDetails";
 
 function App() {
 	const router = createBrowserRouter(
@@ -31,6 +33,14 @@ function App() {
 				</Route>
 				<Route path="jobs" element={<JobsLayout />}>
 					<Route index element={<Jobs />} loader={jobsLoader} />
+				</Route>
+				<Route path="todos" element={<TodosLayout />}>
+					<Route index element={<Todos />} loader={TodosLoader} />
+					<Route
+						path=":id"
+						element={<TodoDetails />}
+						loader={TodoDetailsLoader}
+					/>
 				</Route>
 				<Route path="*" element={<NotFound />} />
 			</Route>
